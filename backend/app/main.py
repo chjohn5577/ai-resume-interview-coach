@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 
+from app.database import engine
+from app.models import Base
+
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI(
     title="AI Resume Interview Coach",
-    description="Backend API for resume analysis and interview preparation",
     version="0.1.0"
 )
 
@@ -14,7 +18,7 @@ def home():
     }
 
 @app.get("/health")
-def health_check():
+def health():
     return {
         "status": "healthy"
     }
