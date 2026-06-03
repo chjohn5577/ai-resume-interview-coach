@@ -1,30 +1,36 @@
-# AI Resume & Interview Coach
+# AI Resume Interview Coach
 
-## Overview
-
-AI-powered platform that helps users improve resumes and prepare for interviews.
+An AI-powered platform that helps users improve resumes and prepare for technical interviews.
 
 ## Features
 
-- Resume Analysis
-- Interview Practice
-- Progress Tracking
-- AI Feedback
+- User Registration
+- User Authentication
+- Resume Upload (Coming Soon)
+- AI Resume Analysis (Planned)
+- Mock Interviews (Planned)
 
 ## Tech Stack
 
-Frontend:
-- React
-
 Backend:
 - FastAPI
+- SQLAlchemy
+- SQLite
 
-Database:
-- PostgreSQL
+Authentication:
+- Password Hashing
 
-AI:
-- OpenAI API
+Tools:
+- GitHub Projects
+- GitHub Issues
 
-## Project Status
+## API Endpoints
 
-Week 1: Planning & Architecture
+GET /
+GET /health
+POST /register
+POST /login
+
+## Current Status
+
+Week 2 Complete
