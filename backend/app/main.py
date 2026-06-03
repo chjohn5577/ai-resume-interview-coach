@@ -5,6 +5,7 @@ from app.database import engine
 from app.models import Base, User
 from app.schemas import UserCreate
 from app.dependencies import get_db
+from app.security import hash_password
 
 Base.metadata.create_all(bind=engine)
 
@@ -37,7 +38,7 @@ def register_user(
     new_user = User(
         name=user.name,
         email=user.email,
-        password_hash=user.password
+        password_hash=hash_password(user.password)
     )
 
     db.add(new_user)
